@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background: gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px;
+    width: 400px;
+    padding: 20px 25px;
+}
+
+h1 {
+    color: white;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+
+}
+
+
+.input-field {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 5px 10px;
+}
+
+
+.input-field input {
+    padding: 6px 10px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    width: 70%;
+    background: rgb(82, 82, 83);
+    color: white;
+
+}
+
+.input-field button {
+    padding: 6px 10px;
+    border-radius: 5px;
+    border: none;
+    background: blue;
+    color: white;
+    cursor: pointer;
+}
+
+.input-field button:active {
+    box-shadow: 0px 0px 10px white;
+}
+
+
+.container ul {
+    background: rgb(43, 43, 47);
+    width: 100%;
+    list-style: none;
+    border-radius: 5px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    color: white;
+
+}
+
+#todo-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#todo-list li button {
+    background-color: red;
+    padding: 2px;
+    border: none;
+    border-radius: 2px;
+    color: white;
+}
