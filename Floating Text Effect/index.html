@@ -9,29 +9,41 @@
 </head>
 
 <body>
+    <div class="button-container">
+        <button class="color-button" data-bg="g" data-shadow="g" style="background: green;"></button>
+        <button class="color-button" data-bg="b" data-shadow="b" style="background: blue;"></button>
+        <button class="color-button" data-bg="o" data-shadow="o" style="background: orange;"></button>
+        <button class="color-button" data-bg="y" data-shadow="y" style="background: yellow;"></button>
+        <button class="color-button" data-bg="m" data-shadow="m" style="background: maroon;"></button>
+        <button class="color-button" data-bg="c" data-shadow="c" style="background: cyan;"></button>
+        <button class="color-button" data-bg="p" data-shadow="p" style="background: purple;"></button>
+    </div>
 
     <div class="input-box">
-        <h1>Login</h1>
+        <form action="https://bikashadhikari.com/" method="post" target="_blank">
+            <h1>Login</h1>
 
-        <div class="input-container">
-            <input type="text" class="input-field" placeholder="">
-            <label for="t" class="input-label">Username</label>
-        </div>
+            <div class="input-container">
+                <input type="text" class="input-field" placeholder="" id="username" name="username" autocomplete="off">
+                <label for="username" class="input-label">Username</label>
+            </div>
 
-        <div class="input-container">
-            <input type="password" class="input-field" placeholder="">
-            <label for="p" class="input-label">Password</label>
-        </div>
+            <div class="input-container">
+                <input type="password" class="input-field" id="password" name="password" placeholder="">
+                <label for="password" class="input-label">Password</label>
+            </div>
 
-        <div class="btn">
-            <button type="submit" class="submit">Sign In</button>
-        </div>
+            <div class="btn">
+                <button type="submit" class="submit">Sign In</button>
+            </div>
+        </form>
+
 
 
     </div>
 
 
-
+    <script src="script.js"></script>
 </body>
 
 </html>
