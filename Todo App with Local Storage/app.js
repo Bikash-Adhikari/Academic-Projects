@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', () => {
 
 
@@ -37,8 +38,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+
+
+
+    // Display
     function renderTask(task) {
-        console.log(task);
+        const li = document.createElement('li');
+        li.setAttribute('data-id', task.id);
+
+        if (task.completed) li.classList.add('completed')
+
+        li.innerHTML = `
+        <span>${task.text}</span>
+        <button>delete</button>
+        `;
+
+
+        li.addEventListener('click', (e) => {
+            if (e.target.tagname === 'BUTTON') return;
+            task.completed = !task.completed;
+            li.classList.toggle('completed');
+            saveTasks();
+        })
+
+
+        todoList.appendChild(li);
     }
 
 
@@ -46,8 +70,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-    // Save the Tasks to local storage
 
+
+
+    // Save the Tasks to local storage
     function saveTasks() {
 
         localStorage.setItem("tasks", JSON.stringify(tasks));
