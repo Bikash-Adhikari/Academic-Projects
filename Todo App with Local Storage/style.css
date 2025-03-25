@@ -109,6 +109,11 @@ h1 {
     color: white;
 }
 
-.completed{
+
+#todo-list li button:active {
+    box-shadow: 0 0 5px white;
+}
+
+.completed {
     text-decoration: line-through;
 }
