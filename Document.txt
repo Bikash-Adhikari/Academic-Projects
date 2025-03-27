@@ -1,0 +1,21 @@
+Step1: Create HTML & CSS file
+Step2: Work on JS => get all necessary field from HTML to JS (input, button, )
+step3: add event listener on button
+step4: visit weather site and create A/C on https://home.openweathermap.org/ and find "My API keys" then store it on a variable[API_KEY]
+step5: go to [https://openweathermap.org/api/one-call-3] find API call link
+step6: Create functions
+        1. fetchWeatherData
+        2. displayWeatherData
+        3. showError
+
+step7: work on showError() function: error message show but weather info hide.
+step8: Remember following--
+        1. It may throw an error 
+        2. It is located in different contenient(servier/database)
+step9: try-catch with async-await for fetchWeatherData() and displayWeatherData() and showError()
+
+
+step10: work on fetchWeatherData function ===> to get data ===> find AIP call URL on weather site and store this url on 'url' variable.
+step11: store fetch(url) in response variable
+step12: What if(!response.ok)
+step13: if respnse ==> 
