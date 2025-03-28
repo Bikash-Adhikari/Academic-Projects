@@ -18,4 +18,9 @@ step9: try-catch with async-await for fetchWeatherData() and displayWeatherData(
 step10: work on fetchWeatherData function ===> to get data ===> find AIP call URL on weather site and store this url on 'url' variable.
 step11: store fetch(url) in response variable
 step12: What if(!response.ok)
-step13: if respnse ==> 
+step13: respnse ==> Error or OKay
+        1. if error => show error
+        2. if Ok => convert respnse into json
+
+
+step11: work on displayWeatherData() 

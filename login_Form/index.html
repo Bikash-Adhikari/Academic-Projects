@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="login-container">
+        <div class="logo">B</div>
+        <h2>Welcome Back</h2>
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Password">
+        <div class="remember">
+            <label>
+                <input type="checkbox" id="remember">
+                <p>Remember me</p>
+            </label>
+            <a href="#">Forget Password?</a>
+        </div>
+        <button onclick="login()">Log In</button>
+        <div class="social-login">
+            <button onclick="googleLogin()">
+                <img src="./images/icons8-google-48.png" alt="Google">
+                Log In with Google
+            </button>
+            <button class="apple" onclick="appleLogin()">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/512px-Apple_logo_black.svg.png"
+                    alt="Apple">
+                Log In with Apple
+            </button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
