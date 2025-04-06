@@ -2,8 +2,30 @@
 import express from 'express';
 import 'dotenv/config';
 
+import logger from "./logger.js";  //copied-from-documentation 
+import morgan from "morgan";  //copied-from-documentation
+
+
 const app = express();
 const port = process.env.PORT || 3000;
+const morganFormat = ":method :url :status :response-time ms";  //copied-from-documentation
+
+
+app.use(    //copied-from-documentation
+    morgan(morganFormat, {
+        stream: {
+            write: (message) => {
+                const logObject = {
+                    method: message.split(" ")[0],
+                    url: message.split(" ")[1],
+                    status: message.split(" ")[2],
+                    responseTime: message.split(" ")[3],
+                };
+                logger.info(JSON.stringify(logObject));
+            },
+        },
+    })
+);
 
 
 
@@ -55,7 +77,7 @@ app.get('/burgers/:id', (req, res) => {
 app.put('/burgers/:id', (req, res) => {
     const bugr = burgerData.find(b => b.id === parseInt(req.params.id));
     if (!bugr) {
-        res.status(404).send("Burger not found!!!")
+        return res.status(404).send("Burger not found!!!")
     }
 
     const { name, price } = req.body;
@@ -72,7 +94,7 @@ app.put('/burgers/:id', (req, res) => {
 app.delete('/burgers/:id', (req, res) => {
     const index = burgerData.findIndex(b => b.id === parseInt(req.params.id));
     if (index === -1) {
-        res.status(404).send("Burger item not found !!!")
+        return res.status(404).send("Burger item not found !!!")
     }
 
     burgerData.splice(index, 1);
