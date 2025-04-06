@@ -1,0 +1,23 @@
+{
+  "name": "burger-manager",
+  "version": "1.0.0",
+  "description": "manager for the burger cafe in kathmandu",
+  "keywords": [
+    "express",
+    "burger"
+  ],
+  "license": "ISC",
+  "author": "bikash adhikari",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
